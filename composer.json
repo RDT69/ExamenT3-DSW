@@ -1,0 +1,15 @@
+{
+    "name": "daw2/examen-t3-dsw",
+    "type": "projerct",
+    "autoload": {
+        "psr-4": {
+            "Daw2\\ExamenT3Dsw\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jose"
+        }
+    ],
+    "require": {}
+}
