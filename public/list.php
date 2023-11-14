@@ -17,7 +17,7 @@ if (isset($_GET['filter'])) {
     foreach($shop->showServices() as $e) {
       echo "<br>$e";
     };
-  } else if ($filter == 'expirationDate') {
+  } else if ($filter == 'expiration') {
     foreach($shop->showExpiredProducts() as $e) {
       echo "<br>$e";
     };  } else if ($filter == 'unexpired') {

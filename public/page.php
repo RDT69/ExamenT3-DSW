@@ -16,7 +16,7 @@ require "../vendor/autoload.php";
         <li><a href="show.php?filter=products">Show Products</a></li>
         <li><a href="show.php?filter=services">Show Services</a></li>
         <li><a href="show.php?filter=expiration">Show Expired Elements</a></li>
-        <li><a href="show.php?filter=sellable">Show Sellable Elements</a></li>
+        <li><a href="show.php?filter=unexpired">Show Sellable Elements</a></li>
     </ul>
 </body>
 </html>
