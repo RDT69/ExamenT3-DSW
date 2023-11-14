@@ -1,8 +1,9 @@
-
 <!DOCTYPE html>
+
 <?php
 require "../vendor/autoload.php";
 ?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,11 +13,11 @@ require "../vendor/autoload.php";
 <body>
     <h2>Tienda</h2>
     <ul>
-        <li><a href="show.php?filter=all">Show All</a></li>
-        <li><a href="show.php?filter=products">Show Products</a></li>
-        <li><a href="show.php?filter=services">Show Services</a></li>
-        <li><a href="show.php?filter=expiration">Show Expired Elements</a></li>
-        <li><a href="show.php?filter=unexpired">Show Sellable Elements</a></li>
+        <li><a href="list.php?filter=all">Show All</a></li>
+        <li><a href="list.php?filter=products">Show Products</a></li>
+        <li><a href="list.php?filter=services">Show Services</a></li>
+        <li><a href="list.php?filter=expiration">Show Expired Elements</a></li>
+        <li><a href="list.php?filter=unexpired">Show no Expired Elements</a></li>
     </ul>
 </body>
 </html>

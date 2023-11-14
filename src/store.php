@@ -11,48 +11,58 @@ class Store {
     }
 
     public function showElements() {
+        $arrayElements = [];
         foreach ($this->elements as $element) {
-            print_r($element);
-            echo "Precio de venta: " . $element->getPrice() . "<br>";
+            $arrayElements[] = $element;
+            //echo "Precio de venta: " . $element->getPrice() . "<br>";
         }
+        return $arrayElements;
     }
 
     public function showProducts() {
-        foreach ($this->elements as $element) {
-            if($element instanceof Product){
-                print_r($element);
-                echo "Precio de venta: " . $element->getPrice() . "<br>";
+        $arrayProducts = [];
+        foreach ($this->elements as $product) {
+            if($product instanceof Product){
+                $arrayProducts[] = $product;
+                //echo "Precio de venta: " . $product->getPrice() . "<br>";
             }
         }
+        return $arrayProducts;
     }
 
     public function showServices() {
-        foreach ($this->elements as $element) {
-            if($element instanceof Service){
-                print_r($element);
-                echo "Precio de venta: " . $element->getPrice() . "<br>";
+        $arrayService = [];
+        foreach ($this->elements as $service) {
+            if($service instanceof Service){
+                $arrayService [] = $service;
+                //echo "Precio de venta: " . $service->getPrice() . "<br>";
             }
         }
+        return $arrayService;
     }
 
     public function showExpiredProducts() {
-        foreach ($this->elements as $element) {
-            if($element instanceof expiredProduct){
-                print_r($element);
-                echo "Precio de venta: " . $element->getPrice() . "<br>";
+        $arrayExpiredProduct = [];
+        foreach ($this->elements as $expieredProduct) {
+            if($expieredProduct instanceof expiredProduct){
+                $arrayExpiredProduct[] = $expieredProduct;
+                //echo "Precio de venta: " . $expieredProduct->getPrice() . "<br>";
             }
         }
+        return $arrayExpiredProduct;
     }
 
     public function showNoExpiredProducts() {
-        foreach ($this->elements as $element) {
-            if($element instanceof expiredProduct){
-                if($element->isExpired()){
-                    print_r($element);
-                    echo "Precio de venta: " . $element->getPrice() . "<br>";
+        $arrayNoExpiredProduct = [];
+        foreach ($this->elements as $NoExpiredProduct) { 
+            if($NoExpiredProduct instanceof expiredProduct){
+                if($NoExpiredProduct->isExpired()){
+                    $arrayNoExpiredProduct[] = $NoExpiredProduct;
+                    //echo "Precio de venta: " . $NoExpiredProduct->getPrice() . "<br>";
                 }
             }
         }
+        return $arrayNoExpiredProduct;
     }
 
 } 

@@ -8,8 +8,8 @@ class Product extends Element{
     private $weight;
     private $volume;
 
-    public function __construct($name,$basePrice,$caracteristics,$companyName,$weight,$volume) {
-        parent::__construct($name,$basePrice,$caracteristics);
+    public function __construct($name,$baseP,$caracteristics,$companyName,$weight,$volume) {
+        parent::__construct($name,$baseP,$caracteristics);
         $this->companyName = $companyName;
         $this->weight = $weight;
         $this->volume = $volume;
@@ -24,5 +24,9 @@ class Product extends Element{
         $shippingCost = $fixedCost + $weightCost + $volumeCost;
 
         return $shippingCost;
+    }
+    public function __toString()
+    {
+        return "Producto: {$this->companyName} , {$this->weight} , {$this->volume}";
     }
 }

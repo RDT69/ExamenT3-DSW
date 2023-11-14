@@ -6,22 +6,22 @@ if (isset($_GET['filter'])) {
   $filter = $_GET['filter'];
 
   if ($filter == 'all') {
-    foreach($shop->showElements() as $e) {
+    foreach($store->showElements() as $e) {
       echo "<br>$e";
     };
   } else if ($filter == 'products') {
-    foreach($shop->showProducts() as $e) {
+    foreach($store->showProducts() as $e) {
       echo "<br>$e";
     };
   } else if ($filter == 'services') {
-    foreach($shop->showServices() as $e) {
+    foreach($store->showServices() as $e) {
       echo "<br>$e";
     };
   } else if ($filter == 'expiration') {
-    foreach($shop->showExpiredProducts() as $e) {
+    foreach($store->showExpiredProducts() as $e) {
       echo "<br>$e";
     };  } else if ($filter == 'unexpired') {
-      foreach($shop->showNoExpiredProducts() as $e) {
+      foreach($store->showNoExpiredProducts() as $e) {
         echo "<br>$e";
       };
   }

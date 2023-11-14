@@ -45,4 +45,8 @@ class Element {
     public function setTax($newTax) {
         $this->tax == $newTax;
     }
+
+    public function __toString() {
+            return "Element: {$this->name} , {$this->baseP} , {$this->caracteristics} , {$this->getPrice()}";
+        }
 }
